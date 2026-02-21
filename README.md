@@ -34,17 +34,34 @@ A premium, feature-rich pipeline builder UI built as part of the VectorShift Fro
 
 ```
 .
-├── frontend/               # React application
+├── screenshots/            # Official project captures
+│   ├── home_complete_view.png
+│   ├── submit_data_view.png
+│   ├── warning_and_highlighting_node.png
+│   ├── json_preview.png
+│   ├── error_popover_view.png
+│   └── empty_view.png
+├── frontend/               # React application (Vite-based)
 │   ├── src/
-│   │   ├── components/     # Canvas, Footer, and Toolbar components
-│   │   ├── nodes/          # BaseNode and 9+ custom node types
-│   │   ├── store/          # Zustand state management
-│   │   └── utils/          # Validation, helpers, and constants
-│   └── index.css           # Global design tokens and animations
+│   │   ├── components/     # High-fidelity UI components
+│   │   │   ├── Canvas/     # Canvas, EmptyState, DeletableEdge
+│   │   │   ├── FooterArea/ # ActionButtons, AnalysisModal, FooterArea
+│   │   │   ├── Sidebar/    # JSON Preview Sidebar
+│   │   │   ├── Toolbar/    # Node Toolbar and logic
+│   │   │   └── UI/         # Reusable Field, Icon, and Label components
+│   │   ├── nodes/          # BaseNode abstraction & 9 specialized nodes
+│   │   ├── constants/      # Node Config and Form Options
+│   │   ├── store/          # Zustand global state (useStore.js)
+│   │   ├── utils/          # Validation logic and regex helpers
+│   │   ├── App.jsx         # Root layout
+│   │   ├── submit.jsx      # Specialized Submit component
+│   │   └── index.css       # Core Design System & Tokens
 ├── backend/                # FastAPI application
-│   ├── main.py             # Validation logic and API endpoints
-│   └── venv/               # Python virtual environment
-└── README.md               # You are here
+│   ├── main.py             # DAG & Connectivity analysis logic
+│   ├── requirements.txt    # Python dependencies
+│   └── venv/               # Project virtual environment
+├── rule.md                 # Project architecture & standards
+└── README.md               # Documentation
 ```
 
 ## 🚀 Getting Started
