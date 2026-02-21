@@ -59,10 +59,10 @@ export const TextNode = ({ id, data }) => {
                         style={{ top: `${((index + 1) / (variables.length + 1)) * 100}%` }}
                     />
                     <span
-                        className="vs-handle-label vs-handle-label-left text-amber-500 text-[10px] font-semibold"
+                        className="vs-handle-label vs-handle-label-left text-amber-500 text-[9px] font-semibold"
                         style={{
                             top: `${((index + 1) / (variables.length + 1)) * 100}%`,
-                            transform: 'translateY(-50%)',
+                            transform: 'translateY(-140%)',
                         }}
                     >
                         {varName}
