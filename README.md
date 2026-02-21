@@ -1,6 +1,27 @@
 # VectorShift Pipeline Builder 🚀
 
-A premium, feature-rich pipeline builder UI built as part of the VectorShift Frontend Technical Assessment. This application allows users to design complex workflows using a drag-and-drop interface, featuring custom node abstractions, dynamic text logic, and backend DAG validation.
+A pipeline builder UI. This application allows users to design complex workflows using a drag-and-drop interface, featuring custom node abstractions, dynamic text logic, and backend DAG validation.
+
+## 📸 Demo & Screenshots
+
+### 1. Core Interface & Node Builder
+![Interface Overview](screenshots/home_complete_view.png)
+
+### 2. Intelligent Pipeline Validation
+![Analysis Modal](screenshots/submit_data_view.png)
+
+### 3. Real-time Node Status & Highlighting
+![Node Validation](screenshots/warning_and_highlighting_node.png)
+
+### 4. Resizable JSON Data Preview
+![JSON Preview](screenshots/json_preview.png)
+
+### 5. Advanced Error Handling
+![Error Handling](screenshots/error_popover_view.png)
+
+### 6. Clean Empty State
+![Empty Canvas](screenshots/empty_view.png)
+
 
 ## ✨ Key Features
 
@@ -87,23 +108,3 @@ pip install -r requirements.txt  # Or manually install fastapi uvicorn
 uvicorn main:app --reload --port 8000
 ```
 The backend will run at `http://localhost:8000`.
-
-## 📸 Demo & Screenshots
-
-### 1. Core Interface & Node Builder
-![Interface Overview](screenshots/home_complete_view.png)
-
-### 2. Intelligent Pipeline Validation
-![Analysis Modal](screenshots/submit_data_view.png)
-
-### 3. Real-time Node Status & Highlighting
-![Node Validation](screenshots/warning_and_highlighting_node.png)
-
-### 4. Resizable JSON Data Preview
-![JSON Preview](screenshots/json_preview.png)
-
-### 5. Advanced Error Handling
-![Error Handling](screenshots/error_popover_view.png)
-
-### 6. Clean Empty State
-![Empty Canvas](screenshots/empty_view.png)
