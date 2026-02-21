@@ -1,0 +1,27 @@
+# Exclude local instructions and assessment pdfs
+rule.md
+project_instruction.md
+*.pdf
+
+# Exclude backend as requested
+backend/
+
+# Standard JS/Vite exclusions
+node_modules/
+dist/
+dist-ssr
+*.local
+.env
+.env.*
+
+# OS files
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
