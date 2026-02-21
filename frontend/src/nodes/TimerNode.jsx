@@ -2,9 +2,16 @@ import { useState } from 'react';
 import { BaseNode } from './BaseNode';
 import { Timer } from 'lucide-react';
 import { NodeInput } from '../components/UI/NodeField';
+import { useStore } from '../store/useStore';
 
 export const TimerNode = ({ id, data }) => {
     const [duration, setDuration] = useState(data?.duration || '1');
+    const updateNodeField = useStore((state) => state.updateNodeField);
+
+    const handleDurationChange = (e) => {
+        setDuration(e.target.value);
+        updateNodeField(id, 'duration', e.target.value);
+    };
 
     return (
         <BaseNode
@@ -23,7 +30,7 @@ export const TimerNode = ({ id, data }) => {
                 min="0"
                 step="0.1"
                 value={duration}
-                onChange={(e) => setDuration(e.target.value)}
+                onChange={handleDurationChange}
                 placeholder="1.0"
             />
             <span className="text-[11px] text-gray-500">

@@ -52,12 +52,20 @@ export const useStore = create((set, get) => ({
         });
     },
 
+    setEdges: (newEdgesOrUpdater) => {
+        if (typeof newEdgesOrUpdater === 'function') {
+            set({ edges: newEdgesOrUpdater(get().edges) });
+        } else {
+            set({ edges: newEdgesOrUpdater });
+        }
+    },
+
     onConnect: (connection) => {
         set({
             edges: addEdge(
                 {
                     ...connection,
-                    type: 'smoothstep',
+                    type: 'deletable',
                     animated: true,
                     markerEnd: {
                         type: MarkerType.ArrowClosed,

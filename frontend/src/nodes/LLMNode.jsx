@@ -4,10 +4,25 @@ import { BrainCircuit } from 'lucide-react';
 import { SelectItem } from '@heroui/react';
 import { NodeSelect, NodeTextarea } from '../components/UI/NodeField';
 import { LLM_MODELS } from '../constants/formOptions';
+import { useStore } from '../store/useStore';
 
 export const LLMNode = ({ id, data }) => {
     const [model, setModel] = useState(data?.model || 'gpt-4o');
     const [systemPrompt, setSystemPrompt] = useState(data?.systemPrompt || '');
+    const updateNodeField = useStore((state) => state.updateNodeField);
+
+    const handleModelChange = (e) => {
+        const val = e.target.value;
+        if (val) {
+            setModel(val);
+            updateNodeField(id, 'model', val);
+        }
+    };
+
+    const handlePromptChange = (e) => {
+        setSystemPrompt(e.target.value);
+        updateNodeField(id, 'systemPrompt', e.target.value);
+    };
 
     return (
         <BaseNode
@@ -24,7 +39,7 @@ export const LLMNode = ({ id, data }) => {
             <NodeSelect
                 label="Model"
                 selectedKeys={[model]}
-                onChange={(e) => setModel(e.target.value)}
+                onChange={handleModelChange}
                 className="w-full"
             >
                 {LLM_MODELS.map((opt) => (
@@ -37,7 +52,7 @@ export const LLMNode = ({ id, data }) => {
             <NodeTextarea
                 label="System Prompt"
                 value={systemPrompt}
-                onChange={(e) => setSystemPrompt(e.target.value)}
+                onChange={handlePromptChange}
                 placeholder="Enter system instructions..."
                 minRows={2}
                 maxRows={5}

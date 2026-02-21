@@ -156,6 +156,15 @@ body {
   outline: none !important;
 }
 
+/* Validation Icon reset — don't use generic trigger styles */
+.react-flow__node button.vs-icon-btn[data-slot="trigger"] {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 9999px !important;
+  cursor: pointer !important;
+}
+
 /* Chevron / selector icon — force to right side */
 .react-flow__node [data-slot="selector-icon"],
 .react-flow__node [data-slot="selectorIcon"] {

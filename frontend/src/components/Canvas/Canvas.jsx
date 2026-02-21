@@ -5,6 +5,7 @@ import ReactFlow, { Controls, Background, MiniMap } from 'reactflow';
 import { useStore } from '../../store/useStore';
 import { shallow } from 'zustand/shallow';
 import { nodeTypes } from '../../nodes';
+import { DeletableEdge } from './DeletableEdge';
 import { getInitNodeData } from '../../utils/helpers';
 import { EmptyState } from './EmptyState';
 
@@ -12,6 +13,10 @@ import 'reactflow/dist/style.css';
 
 const gridSize = 20;
 const proOptions = { hideAttribution: true };
+
+const edgeTypes = {
+    deletable: DeletableEdge,
+};
 
 const selector = (state) => ({
     nodes: state.nodes,
@@ -24,7 +29,7 @@ const selector = (state) => ({
 });
 
 const defaultEdgeOptions = {
-    type: 'smoothstep',
+    type: 'deletable',
     animated: true,
     style: { stroke: '#6366f1', strokeWidth: 2 },
 };
@@ -94,6 +99,7 @@ export const Canvas = () => {
                 onDragOver={onDragOver}
                 onInit={setReactFlowInstance}
                 nodeTypes={nodeTypes}
+                edgeTypes={edgeTypes}
                 proOptions={proOptions}
                 snapGrid={[gridSize, gridSize]}
                 connectionLineType="smoothstep"
