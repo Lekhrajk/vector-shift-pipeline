@@ -46,11 +46,11 @@ export const ConnectionErrorModal = ({ isOpen, onOpenChange, error }) => {
                                 </div>
                             </div>
                         </ModalBody>
-                        <ModalFooter className="justify-center">
+                        <ModalFooter className="justify-center pb-8 pt-2">
                             <Button
                                 variant="flat"
                                 onPress={onClose}
-                                className="bg-gray-800 text-gray-300 hover:bg-gray-700 font-semibold px-8"
+                                className="bg-gray-800 text-gray-300 hover:bg-gray-700 font-bold px-10 rounded-xl transition-all active:scale-95"
                             >
                                 Got it
                             </Button>

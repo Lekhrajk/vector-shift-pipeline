@@ -92,17 +92,12 @@ body {
 
 /* ---- Labels — force outside placement (above the field) ---- */
 .react-flow__node [data-slot="label"] {
-  position: relative !important;
   color: #94a3b8 !important;
   font-size: 10px !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.06em !important;
-  transform: none !important;
-  top: auto !important;
-  left: auto !important;
-  pointer-events: auto !important;
-  padding-bottom: 4px !important;
+  padding-bottom: 2px !important;
 }
 
 /* Input / Textarea wrappers — ensure dark bg, single clean border */
@@ -165,21 +160,29 @@ body {
   cursor: pointer !important;
 }
 
-/* Chevron / selector icon — force to right side */
+/* Select trigger inner layout — ensure flex alignment */
+.react-flow__node [data-slot="trigger"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+}
+
+.react-flow__node [data-slot="value"],
+.react-flow__node [data-slot="value"]>span,
+.react-flow__node [data-slot="value"]>div {
+  flex: 1 !important;
+  text-align: left !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* Force Chevron to right and text to left */
 .react-flow__node [data-slot="selector-icon"],
 .react-flow__node [data-slot="selectorIcon"] {
   order: 999 !important;
   margin-left: auto !important;
-  margin-right: 0 !important;
   position: relative !important;
-  right: 0 !important;
-  left: auto !important;
-}
-
-/* Select trigger inner layout — value left, chevron right */
-.react-flow__node [data-slot="trigger"] [data-slot="value"] {
-  flex: 1 !important;
-  text-align: left !important;
 }
 
 /* Input text */

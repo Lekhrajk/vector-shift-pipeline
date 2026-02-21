@@ -54,7 +54,7 @@ export const SubmitButton = () => {
                 isLoading={loading}
                 spinner={<Loader2 size={16} className="animate-spin text-white" />}
                 endContent={!loading && <Send size={14} className="text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />}
-                className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm tracking-wide px-8 py-3 rounded-lg shadow-lg shadow-indigo-600/20 hover:shadow-indigo-500/30 transition-all duration-200 group disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm tracking-wide px-8 py-3 rounded-lg shadow-lg shadow-indigo-600/20 hover:shadow-indigo-500/30 transition-all duration-200 group disabled:opacity-50 disabled:cursor-not-allowed flex flex-row items-center justify-center gap-2.5 whitespace-nowrap"
             >
                 {loading ? 'Submitting...' : 'Submit'}
             </Button>
