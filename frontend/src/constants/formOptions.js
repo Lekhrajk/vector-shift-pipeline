@@ -52,3 +52,11 @@ export const NOTE_COLORS = [
     { name: 'Red', value: 'rgba(239, 68, 68, 0.5)' },
     { name: 'Purple', value: 'rgba(139, 92, 246, 0.5)' },
 ];
+
+export const LLM_MODELS = [
+    { key: 'gpt-4o', label: 'GPT-4o' },
+    { key: 'gpt-4-turbo', label: 'GPT-4 Turbo' },
+    { key: 'claude-3-opus', label: 'Claude 3 Opus' },
+    { key: 'claude-3-sonnet', label: 'Claude 3 Sonnet' },
+    { key: 'gemini-1.5-pro', label: 'Gemini 1.5 Pro' },
+];

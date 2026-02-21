@@ -100,7 +100,7 @@ export const BaseNode = ({
                         {handle.label && (
                             <span
                                 className={`vs-handle-label vs-handle-label-${handle.position}`}
-                                style={isVertical ? { top: `${offset}%`, transform: 'translateY(-50%)' } : {}}
+                                style={isVertical ? { top: `${offset}%`, transform: 'translateY(-140%)' } : {}}
                             >
                                 {handle.label}
                             </span>

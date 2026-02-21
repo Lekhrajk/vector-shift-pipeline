@@ -361,11 +361,11 @@ body {
 }
 
 .vs-handle-label-left {
-  right: calc(100% + 10px);
+  right: calc(100% + 8px);
 }
 
 .vs-handle-label-right {
-  left: calc(100% + 10px);
+  left: calc(100% + 8px);
 }
 
 /* ============================================

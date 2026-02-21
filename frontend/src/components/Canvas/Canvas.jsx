@@ -102,11 +102,11 @@ export const Canvas = () => {
                 deleteKeyCode={['Backspace', 'Delete']}
             >
                 <Background color="#1e293b" gap={gridSize} size={1} />
-                <Controls className="!bg-gray-800 !border-gray-700 !rounded-lg !shadow-xl [&>button]:!bg-gray-800 [&>button]:!border-gray-700 [&>button]:!text-gray-400 [&>button:hover]:!bg-gray-700" />
+                <Controls className="!bottom-16 !bg-gray-800 !border-gray-700 !rounded-lg !shadow-xl [&>button]:!bg-gray-800 [&>button]:!border-gray-700 [&>button]:!text-gray-400 [&>button:hover]:!bg-gray-700" />
                 <MiniMap
                     nodeColor={() => 'rgba(99, 102, 241, 0.6)'}
                     maskColor="rgba(3, 7, 18, 0.85)"
-                    className="!bg-gray-900 !border !border-gray-800 !rounded-lg !shadow-xl"
+                    className="!bottom-16 !bg-gray-900 !border !border-gray-800 !rounded-lg !shadow-xl"
                 />
             </ReactFlow>
         </div>

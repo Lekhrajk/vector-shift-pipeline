@@ -31,7 +31,7 @@ export const ValidationStatus = () => {
 
             {/* Errors Popover */}
             {hasErrors && (
-                <Popover placement="top-start" backdrop="blur" classNames={{ content: "bg-gray-900/95 border border-red-900/50 shadow-2xl rounded-xl w-72 p-0 overflow-hidden" }}>
+                <Popover placement="top-start" backdrop="transparent" classNames={{ content: "bg-gray-900/95 border border-red-900/50 shadow-2xl rounded-xl w-72 p-0 overflow-hidden" }}>
                     <PopoverTrigger>
                         <button className="flex items-center gap-2 px-3 py-1.5 rounded-lg transition-colors border bg-red-500/10 border-red-500/20 hover:bg-red-500/20">
                             <AlertCircle size={16} className="text-red-500" />
@@ -60,7 +60,7 @@ export const ValidationStatus = () => {
 
             {/* Warnings Popover */}
             {hasWarnings && (
-                <Popover placement="top-start" backdrop="blur" classNames={{ content: "bg-gray-900/95 border border-yellow-900/50 shadow-2xl rounded-xl w-72 p-0 overflow-hidden" }}>
+                <Popover placement="top-start" backdrop="transparent" classNames={{ content: "bg-gray-900/95 border border-yellow-900/50 shadow-2xl rounded-xl w-72 p-0 overflow-hidden" }}>
                     <PopoverTrigger>
                         <button className="flex items-center gap-2 px-3 py-1.5 rounded-lg transition-colors border bg-yellow-500/10 border-yellow-500/20 hover:bg-yellow-500/20">
                             <AlertTriangle size={16} className="text-yellow-500" />

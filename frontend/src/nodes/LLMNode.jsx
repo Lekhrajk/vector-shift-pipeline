@@ -3,6 +3,7 @@ import { BaseNode } from './BaseNode';
 import { BrainCircuit } from 'lucide-react';
 import { SelectItem } from '@heroui/react';
 import { NodeSelect, NodeTextarea } from '../components/UI/NodeField';
+import { LLM_MODELS } from '../constants/formOptions';
 
 export const LLMNode = ({ id, data }) => {
     const [model, setModel] = useState(data?.model || 'gpt-4o');
@@ -26,11 +27,11 @@ export const LLMNode = ({ id, data }) => {
                 onChange={(e) => setModel(e.target.value)}
                 className="w-full"
             >
-                <SelectItem key="gpt-4o" value="gpt-4o">GPT-4o</SelectItem>
-                <SelectItem key="gpt-4-turbo" value="gpt-4-turbo">GPT-4 Turbo</SelectItem>
-                <SelectItem key="claude-3-opus" value="claude-3-opus">Claude 3 Opus</SelectItem>
-                <SelectItem key="claude-3-sonnet" value="claude-3-sonnet">Claude 3 Sonnet</SelectItem>
-                <SelectItem key="gemini-1.5-pro" value="gemini-1.5-pro">Gemini 1.5 Pro</SelectItem>
+                {LLM_MODELS.map((opt) => (
+                    <SelectItem key={opt.key} value={opt.key}>
+                        {opt.label}
+                    </SelectItem>
+                ))}
             </NodeSelect>
 
             <NodeTextarea

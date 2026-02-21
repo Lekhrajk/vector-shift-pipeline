@@ -6,7 +6,7 @@ export const NodeValidationIcon = ({ errors, warnings }) => {
 
     return (
         <div className="ml-auto">
-            <Popover placement="top" backdrop="blur" classNames={{ content: "bg-gray-900/95 border border-gray-800 shadow-2xl rounded-xl w-64 p-3" }}>
+            <Popover placement="top" backdrop="transparent" classNames={{ content: "bg-gray-900/95 border border-gray-800 shadow-2xl rounded-xl w-64 p-3" }}>
                 <PopoverTrigger>
                     <button className={`flex items-center justify-center w-6 h-6 rounded-full transition-colors ${errors.length > 0 ? "text-red-400 hover:bg-red-400/10" : "text-yellow-500 hover:bg-yellow-500/10"}`}>
                         <AlertCircle size={16} />
